@@ -1,0 +1,56 @@
+@use "../abstracts/" as *;
+
+.header {
+  background-color: #fff;
+
+  .nav_bar {
+    padding: 2rem 0;
+    @include flex(space-between, center);
+  }
+
+  .nav_list {
+    @include flex(center, center) ;
+    .nav_item {
+      margin: 0 2rem;
+
+      &:hover {
+        a {
+          color: $red-color;
+        }
+      }
+    }
+  }
+
+  img {
+    height: auto;
+  }
+
+  .ham_menu {
+    display: none;
+
+    i {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    background-color: rgba(47, 53, 79, 0.95);
+
+    .logo {
+      color: white;
+    }
+
+    .nav_bar {
+      .ham_menu {
+        display: block;
+        color: #fff;
+      }
+
+      .nav_item {
+        display: none;
+      }
+    }
+  }
+}

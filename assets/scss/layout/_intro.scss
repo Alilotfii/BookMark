@@ -1,0 +1,53 @@
+@use "../abstracts/" as *;
+
+.intro {
+    margin-top: 10rem;
+
+    .intro__container {
+        @include flex (center, center)
+    }
+
+    .intro__contant {
+        flex: 1;
+
+        .intro__btns {
+            display: flex;
+            gap: 2rem;
+        }
+    }
+
+    .intro__image {
+        flex: 1;
+    }
+}
+
+//  responsive section 
+@media (max-width:991px) {
+    .intro {
+        .intro__container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .intro__contant {
+            order: 1;
+            text-align: center;
+        }
+
+        .intro__btns {
+            @include flex (center, center);
+        }
+
+        .intro__shape {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:720px) {
+    .intro {
+        .intro__btns {
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@use "../abstracts/" as *;
+
+.feature {
+    margin-top: 10rem;
+    margin-bottom: 18rem;
+    position: relative;
+   
+
+    .shape_left {
+        margin-top: 10rem;
+    }
+
+    .feature_title {
+        text-align: center;
+
+        .title {
+            font-size: 3rem;
+          
+        }
+
+        .text {
+            color: $gray-color;
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+            width: 50%;
+            margin: 0 auto;
+            padding-top: 1rem;
+        }
+    }
+
+    .feature_header {
+        @include flex(space-evenly, center);
+        padding: 4rem 0 2rem 0;
+        font-size: 1.5rem;
+        border-bottom: 1px solid #e4e4eb;
+        color: $gray-color;
+    }
+
+    .tab_active {
+        a {
+            color: $red-color;
+        }
+    }
+
+    .feature__container {
+        @include flex(center, center);
+        margin-top: 4rem;
+        gap: 16rem;
+    }
+
+    .feature__contant {
+        flex: 1;
+    }
+
+    .feature__image {
+        flex: 1;
+
+        img {
+            max-width: 50rem;
+            min-height: 40rem;
+        }
+    }
+}
+
+//  responsive section
+@media (max-width:991px) {
+    .feature {
+
+        .feature_header {
+            flex-direction: column;
+            border-bottom: none;
+            gap: 2rem;
+        }
+
+        .feature__container {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .feature__contant {
+            order: 1;
+            text-align: center;
+        }
+
+        .feature__btns {
+            @include flex(center, center)
+        }
+
+        .feature_shape {
+            display: none;
+        }
+
+        .feature__image {
+            img {
+                max-width: 80rem;
+                min-height: 0;
+            }
+        }
+
+        .title {
+            .feature_text {
+
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+@media (max-width:720px) {
+    .feature {
+        .feature__image {
+            img {
+                max-width: 44rem;
+                min-height: 0;
+            }
+        }
+        .feature_title{
+            .text{
+                width: 100%;
+            }
+        }
+    }
+}

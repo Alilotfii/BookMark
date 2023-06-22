@@ -1,0 +1,124 @@
+@use "../abstracts/" as *;
+
+footer {
+  .footer_top {
+    text-align: center;
+    color: #fff;
+    background-color: $blue-color;
+    padding: 3rem 0;
+    margin-top: 4rem;
+
+    .text {
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+
+    .title {
+      line-height: 4rem;
+      font-weight: bold;
+      margin-bottom: 2.5rem;
+      color: #fff;
+      font-size: 2.5rem;
+    }
+
+    form {
+      .form_block {
+        @include flex(center, center);
+        gap: 2rem;
+      }
+
+      input {
+        height: 3.8rem;
+        width: 30rem;
+        padding: 0 1rem;
+        border: none;
+        outline: none;
+        border-radius: 0.5rem;
+        color: #222;
+      }
+    }
+
+    .btn_footer {
+      background-color: $red-color;
+      padding: 1rem 4.5rem;
+      font-size: 1.5rem;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: 0.3s;
+      border: 0.1rem solid #fa5a57;
+      padding: 0.7rem 5rem;
+      color: #fff;
+
+      &:hover {
+        border: 0.1rem solid $red-color;
+        background-color: #fff;
+        color: $red-color;
+
+      }
+    }
+  }
+
+  .footer_bottom {
+    background-color: #242946;
+    padding: 2rem 0;
+
+    .footer_bottom_container {
+      @include flex(space-between, center);
+
+      .nav_list {
+        @include flex(space-between, center);
+        gap: 3rem;
+
+        .nav_item {
+          a {
+            color: #fff;
+          }
+
+          &:hover {
+            a {
+              color: $red-color;
+            }
+          }
+        }
+      }
+
+      .social_links {
+        @include flex(center, center);
+        gap: 3rem;
+      }
+    }
+  }
+
+}
+
+//  responsive section 
+@media (max-width: 720px) {
+  .footer {
+    form {
+      .form_block {
+        flex-direction: column;
+
+        .btn_footer {
+          padding: 0.7rem 11rem;
+        }
+      }
+    }
+
+    .footer_bottom {
+      .footer_bottom_container {
+        flex-direction: column;
+      }
+
+      .nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 2rem;
+      }
+
+      .social_links {
+        gap: 2;
+      }
+    }
+  }
+}
