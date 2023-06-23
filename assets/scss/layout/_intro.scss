@@ -4,7 +4,18 @@
     margin-top: 10rem;
 
     .intro__container {
-        @include flex (center, center)
+        @include flex (center, center);
+
+        .shape_right {
+            position: absolute;
+            width: 48rem;
+            height: 35rem;
+            top: 26rem;
+            right: 0;
+            background-color: #5267de;
+            border-bottom-left-radius: 50%;
+            z-index: -1;
+        }
     }
 
     .intro__contant {

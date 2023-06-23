@@ -4,7 +4,17 @@
     margin-top: 10rem;
     margin-bottom: 18rem;
     position: relative;
-   
+
+    .shape_left {
+        position: absolute;
+        width: 48rem;
+        height: 35rem;
+        top: 26rem;
+        left: 0;
+        background-color: #5267de;
+        border-bottom-right-radius: 50%;
+        z-index: -1;
+    }
 
     .shape_left {
         margin-top: 10rem;
@@ -15,7 +25,7 @@
 
         .title {
             font-size: 3rem;
-          
+
         }
 
         .text {
@@ -116,8 +126,9 @@
                 min-height: 0;
             }
         }
-        .feature_title{
-            .text{
+
+        .feature_title {
+            .text {
                 width: 100%;
             }
         }
